@@ -1,3 +1,8 @@
+# Hockey Stat Tracker
+### Author: Vincent Pennachio
+
+The goal of this project is to create a full stack web software for users to create a roster and log the statistics of each player throughout a game. The statistics will then be saved to a database or be downloaded as a file to the users machine.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
