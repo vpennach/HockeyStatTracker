@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import AboutPage from './pages/AboutPage';
 import DataPage from './pages/DataPage';
 import './App.css';
@@ -12,6 +12,7 @@ function App() {
     <>
       <Navbar />
         <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/data" element={<DataPage />} />
           <Route path="/about" element={<AboutPage />} />

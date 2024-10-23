@@ -1,0 +1,146 @@
+.info-container {
+    background-color: #e9e7db;
+    display: flex;
+    flex-direction: column;
+    min-height: 200vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.divider {
+    width: 90%;
+    height: 20px;
+    background-color: black;
+    border-radius: 10px;
+    margin: 30px auto;
+}
+
+.info-container > h1 {
+    color: black;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+
+.content1-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; /* Centers the content-wrapper */
+    padding: 20px 0; /* Adds some padding to the top and bottom */
+}
+
+.p1-wrapper {
+    width: 50%;
+    padding-right: 20px; /* Adds space between text and image */
+}
+
+.p1-wrapper > h1 {
+    color: black;
+    font-size: 35px;
+    max-width: 90%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center; /* Change this to left to align with the paragraph */
+    margin-bottom: 10px;
+}
+
+.p1-wrapper > p {
+    color: black;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-indent: 30px;
+    text-align: left;
+    margin-left: 0; /* Remove the left margin to align text properly */
+}
+
+.image1-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px; /* Add some padding to separate from the text */
+}
+
+.stanley {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto;
+    border-radius: 50px; /* Optional: add rounded corners */
+}
+
+.content2-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.p2-wrapper > h1 {
+    color: black;
+    font-size: 35px;
+    max-width: 90%;
+    line-height: 1.6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.p2-wrapper > p {
+    color: black;
+    font-size: 20px;
+    max-width: 100%;
+    line-height: 1.6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-indent: 30px;
+}
+
+.image2-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.statsheet {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.divider {
+    width: 90%;
+    height: 10px;
+    background-color: black;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .content1-wrapper {
+        flex-direction: column;
+    }
+
+    .p1-wrapper, .image1-wrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+    .p1-wrapper > h1, .p2-wrapper > h1 {
+        text-align: center;
+    }
+
+    .p1-wrapper > p, .p2-wrapper > p {
+        text-align: justify;
+    }
+}
