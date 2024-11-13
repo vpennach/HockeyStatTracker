@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 const HomePage = () => {
   return (
     <>
+    <title>Hockey Stat Tracker Home</title>
       <GetStarted />
       <Footer />
     </>
