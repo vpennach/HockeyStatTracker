@@ -3,20 +3,18 @@ import React, { useState } from "react";
 import '../App.css';
 import { Button } from './Button';
 import '../styles/GetStarted.css';
-import axios from 'axios';
+import StatIntro from './StatIntro';
 
 function GetStarted() {
-    const [data, setData] = useState(null);
 
-    const handleGetStartedClick = async () => {
-        try {
-            console.log("Attempting to fetch data..."); // Add this log
-            const response = await axios.get('http://localhost:5000/api/team-data'); // Ensure URL is correct
-            console.log("Data fetched:", response.data); // Log fetched data
-            setData(response.data); // Set the fetched data in state
-        } catch (error) {
-            console.error("Error fetching data:", error); // Log any errors
-        }
+    const [showIntro, setShowIntro] = useState(false);
+
+    const handleGetStartedClick = () => {
+        setShowIntro(true);
+    };
+
+    const handleCloseIntro = () => {
+        setShowIntro(false);
     };
 
     return (
@@ -32,15 +30,7 @@ function GetStarted() {
                     GET STARTED
                 </Button>
             </div>
-            {/* Display fetched data */}
-            {data && (
-                <div className="data-display">
-                    <h2>Fetched Data:</h2>
-                    <p><strong>ID:</strong> {data._id}</p>
-                    <p><strong>Team:</strong> {data.team}</p>
-                    <p><strong>Opponent:</strong> {data.opp}</p>
-                </div>
-            )}
+            {showIntro && <StatIntro onClose={handleCloseIntro} />}
         </div>
     );
 }
