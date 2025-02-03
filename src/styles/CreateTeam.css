@@ -1,0 +1,96 @@
+/* src/styles/CreateTeam.css */
+
+/* Overall Page Styling */
+.create-team-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #e9e7db; /* Set background to off-white/beige */
+    color: #2c3454; /* Text color set to dark blue */
+    min-height: 100vh; /* Ensure the page fills the screen */
+  }
+
+  /* Larger Title */
+  .create-team-container h2 {
+    font-size: 2.5rem; /* Increase size of the title */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  /* Grid Layout */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns for proper spacing */
+    gap: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+
+  /* Square Player Boxes */
+  .player-box {
+    background: #2c3454; /* Dark blue background */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: #e9e7db; /* Off-white text */
+    width: 155px; /* Set fixed width */
+    height: 155px; /* Set fixed height to make square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Position Labels */
+  .player-box h4 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+
+  /* Input Fields */
+  .player-box input {
+    width: 90%;
+    padding: 6px;
+    margin: 3px 0;
+    border: 1px solid #e9e7db; /* Light border */
+    border-radius: 4px;
+    background: #e9e7db; /* Light background for input fields */
+    color: #2c3454; /* Dark text for contrast */
+    text-align: center;
+    font-size: 0.9rem; /* Adjusted for smaller box */
+  }
+
+  .player-box input::placeholder {
+    color: #2c3454; /* Dark placeholder text */
+  }
+
+  /* Correct Spacing for Defense and Goalies */
+  .player-box:nth-child(4) { grid-column: 5; } /* LD1 */
+  .player-box:nth-child(5) { grid-column: 6; } /* RD1 */
+  .player-box:nth-child(9) { grid-column: 5; } /* LD2 */
+  .player-box:nth-child(10) { grid-column: 6; } /* RD2 */
+  .player-box:nth-child(14) { grid-column: 5; } /* LD3 */
+  .player-box:nth-child(15) { grid-column: 6; } /* RD3 */
+  .player-box:nth-child(19) { grid-column: 5; } /* G1 */
+  .player-box:nth-child(20) { grid-column: 6; } /* G2 */
+
+  /* Larger Save Team Button */
+  .save-team-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    background: #2c3454; /* Dark button */
+    color: #e9e7db; /* Light text */
+    font-size: 1.4rem; /* Larger button text */
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .save-team-btn:hover {
+    background: #1f283b; /* Slightly darker hover effect */
+  }
+
+
+
